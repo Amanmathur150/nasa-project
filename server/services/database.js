@@ -11,7 +11,7 @@ mongoose.connection.on("error", (error) => {
  async function mongoConnect() {
     try{
 
-        await mongoose.connect("mongodb+srv://nasa-api:xCfORBr0nvMkPIuQ@nasacluster.w8clabo.mongodb.net/nasa?retryWrites=true&w=majority")
+        await mongoose.connect(process.env.DATABASE_URL)
    
         }catch(error){
             console.log(error)
