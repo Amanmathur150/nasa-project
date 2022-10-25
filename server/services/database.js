@@ -11,7 +11,8 @@ mongoose.connection.on("error", (error) => {
  async function mongoConnect() {
     try{
 
-        await mongoose.connect(process.env.DATABASE_URL)
+      
+        mongoose.connect(process.env.DATABASE_URL)
    
         }catch(error){
             console.log(error)

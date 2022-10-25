@@ -31,7 +31,7 @@ exports.submitLaunch = async (launch)=>{
     })
 }
 
-const getSpaceXlaunches = async () =>{
+exports.getSpaceXlaunches = async () =>{
     try{
 
         const responseDoc =  await axios.post("https://api.spacexdata.com/v5/launches/query",{
@@ -112,7 +112,9 @@ const spaceXdatabaseExist = async()=>{
     }
 }
 
-getSpaceXlaunches()
+// getSpaceXlaunches()
+    
+
 
 exports.abortLunches = async (flightNumber)=>{
     return await Launches.findOneAndUpdate({flightNumber : flightNumber} , {
