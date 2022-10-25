@@ -11,7 +11,7 @@ const { getSpaceXlaunches } = require('../models/launches');
 
 
 describe('Launches API', () => {
-  jest.setTimeout(12000)
+  jest.setTimeout(20000)
   beforeAll(async ()=>{
     await mongoConnect()
     await getAllPlanets()
